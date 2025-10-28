@@ -41,9 +41,18 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 10px auto;
+  margin: 50px auto;
+  position: relative;
+  animation: boomerang 6s ease-in-out infinite;
 }
 
+@keyframes boomerang {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(80px, -5px); }
+  50%  { transform: translate(0, 0); }
+  80%  { transform: translate(-80px, -5px); }
+  100% { transform: translate(0, 0); }
+}
 .btn {
   display: inline-block;
   background-color: #ff6fa5;
